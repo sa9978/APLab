@@ -20,8 +20,11 @@ public class Run
         lab1.enrollStudent(std1);
         lab1.enrollStudent(std2);
         lab1.enrollStudent(std3);
-        
-        lab1.setStudents();
+        Student students[] = new Student[3] ;
+        students[0] = std1;
+        students[1] = std2;
+        students[2] = std3;
+        lab1.setStudents(students);
         lab1.print();
     }
 }
