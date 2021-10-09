@@ -1,10 +1,12 @@
 public class Lab
 {
+    //--fields
     private Student[] students;
     private int avg;
     private String day;
     private int capacity;
     private int currentSize;
+
     //--constructors
     /**Create a new student with a given name and ID number.
      * @param cap Lab's
@@ -59,7 +61,7 @@ public class Lab
         return students;
     }
     /**
-     * @param students set Lab's stds
+     * @param students sets Lab's stds
      */
     public void setStudents(Student[] students) {
         for (currentSize = 0; currentSize < students.length; currentSize++) {
@@ -95,7 +97,7 @@ public class Lab
         return day;
     }
     /**
-     * @param day set day of Lab
+     * @param day sets day of Lab
      */
     public void setDay(String day)
     {
@@ -110,7 +112,7 @@ public class Lab
         return capacity;
     }
     /**
-     * @param capacity set capacity of Lab
+     * @param capacity sets capacity of Lab
      */
     public void setCapacity(int capacity)
     {

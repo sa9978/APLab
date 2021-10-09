@@ -14,17 +14,23 @@ public class Run
         std3.print();
         std3.setFirstName("HamidReza");
         std3.print();
-        System.out.println("*********");
         std3.setGrade(13);
-        Lab lab1 = new Lab(3 , "Sunday");
-        lab1.enrollStudent(std1);
-        lab1.enrollStudent(std2);
-        lab1.enrollStudent(std3);
-        Student students[] = new Student[3] ;
-        students[0] = std1;
-        students[1] = std2;
-        students[2] = std3;
-        lab1.setStudents(students);
-        lab1.print();
+
+        Lab[] labs = new Lab[2];
+        labs[0] = new Lab(1, "saturday");
+        labs[1] = new Lab(2, "sunday");
+        labs[0].enrollStudent(std1);
+        labs[1].enrollStudent(std2);
+        labs[1].enrollStudent(std3);
+
+        System.out.println("*********");
+        System.out.println("faculty : ");
+        Faculty f = new Faculty(5);
+        f.enrollLab(labs[0]);
+        f.enrollLab(labs[1]);
+        f.setLabs(labs);
+
+        //print
+        f.print();
     }
 }
