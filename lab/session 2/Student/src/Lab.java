@@ -14,6 +14,7 @@ public class Lab
     {
         capacity = cap;
         day = d;
+        students = new Student[capacity];
     }
     /**add a student to lab
     *@param std is new student
@@ -35,11 +36,19 @@ public class Lab
      */
     public void print()
     {
+        calculateAvg();
+        System.out.println("day : " + day
+                + " capacity : " + capacity + " size : "
+                + currentSize + " avg : " + avg);
+        System.out.println("students : ");
         for (int i = 0 ; i < currentSize ; i++)
         {
-            System.out.println (students[i].getFirstName() + " " + students[i].getLastName() + ", student ID: " + students[i].getId() + ", grade: " + students[i].getGrade());
+            System.out.println (students[i].getFirstName() + " "
+                    + students[i].getLastName() + ", student ID: "
+                    + students[i].getID() + ", grade: "
+                    + students[i].getGrade());
         }
-        System.out.println(avg);
+        System.out.println("avg = " + avg);
     }
     /**
      * get students
@@ -52,9 +61,13 @@ public class Lab
     /**
      * @param students set Lab's stds
      */
-    public void setStudents(Student[] students)
-    {
-        this.students = students;
+    public void setStudents(Student[] students) {
+        for (currentSize = 0; currentSize < students.length; currentSize++) {
+            this.students[currentSize].setFirstName(students[currentSize].getFirstName());
+            this.students[currentSize].setLastName(students[currentSize].getLastName());
+            this.students[currentSize].setGrade(students[currentSize].getGrade());
+            this.students[currentSize].setId(students[currentSize].getID());
+        }
     }
     /**
      * get the avg of student's grades

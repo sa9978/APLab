@@ -41,15 +41,6 @@ public class Student {
     }
 
     /**
-     * get the id of student
-     * @return id field
-     */
-    public String getId()
-    {
-        return id;
-    }
-
-    /**
      * get the first name of student
      * @return firstName field
      */
@@ -68,12 +59,37 @@ public class Student {
     }
 
     /**
-     * @param firstName set first name of a student
+     * get the id of student
+     * @return id field
+     */
+    public String getID() {
+        return id;
+    }
+
+    /**
+     * @param fName set first name of a student
      */
     public void setFirstName(String fName)
     {
         firstName = fName;
     }
+
+    /**
+     * @param lName set last name of a student
+     */
+    public void setLastName(String lName)
+    {
+        lastName = lName;
+    }
+
+    /**
+     * @param id1 set last name of a student
+     */
+    public void setId(String id1)
+    {
+        id = id1;
+    }
+
 
     /**
      * @param stdGrade set grade of a student
