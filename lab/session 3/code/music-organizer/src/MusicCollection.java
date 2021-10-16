@@ -107,4 +107,19 @@ public class MusicCollection
             return false;
 
     }
+    public void search (String musicName)
+    {
+        boolean flag = false;
+        for(int i = 0; i < files.size(); i++)
+        {
+            if(files.get(i).getName().equals(musicName))
+            {
+                flag = true;
+                System.out.println("index = " + i);
+                break;
+            }
+        }
+        if(flag == false)
+            System.out.println(musicName + " Not found");
+    }
 }

@@ -5,6 +5,7 @@ public class Main {
         MusicCollection jazz = new MusicCollection();
         MusicCollection rock = new MusicCollection();
         MusicCollection country = new MusicCollection();
+        MusicCollection favorites = new MusicCollection();
 
         Music music1 = new Music("music1" , "singer1" , 1992);
         Music music2 = new Music("music2" , "singer2" , 1993);
@@ -27,6 +28,9 @@ public class Main {
         country.addFile(music7);
         country.addFile(music8);
 
+        favorites.addFile(music1);
+        favorites.addFile(music3);
+
         System.out.println("POP :");
         pop.listAllFiles();
 
@@ -39,6 +43,9 @@ public class Main {
         System.out.println("COUNTRY :");
         country.listAllFiles();
 
+        System.out.println("FAVORITES :");
+        favorites.listAllFiles();
+
         System.out.println();
         pop.removeFile(1);
         System.out.println("NEW POP :");
@@ -47,6 +54,10 @@ public class Main {
         System.out.println();
         country.startPlaying(1);
         country.stopPlaying();
+
+        System.out.println();
+        pop.search("music1");
+        pop.search("music2");
 
 
     }
