@@ -3,6 +3,7 @@ import ir.huri.jcal.JalaliCalendar;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.HashSet;
+import java.util.Random;
 
 public class Voting {
     private int type; // 0 shows 1 vote & 1 shows multiple votes
@@ -72,8 +73,7 @@ public class Voting {
         String winner = "";
         int max = 0;
         for (String choice : polls.keySet()) { //polls.keySet makes a new set with first part of hashmap
-            System.out.println(choice + " : " + polls.get(choice).size());
-            if (polls.get(choice).size() >= max) { //if votes counts for given choice is greater than max , then set winner
+            if (polls.get(choice).size() > max) { //if votes counts for given choice is greater than max , then set winner
                 max = polls.get(choice).size();
                 winner = choice;
             }
@@ -87,5 +87,25 @@ public class Voting {
      */
     public HashMap<String, HashSet<Vote>> getPolls() {
         return polls;
+    }
+
+    /**
+     * @return choices
+     */
+    public ArrayList<String> getChoices() {
+        return (new ArrayList<>(polls.keySet()));
+    }
+
+    /**
+     * random vote
+     * @param person person
+     */
+    public void RandomChoice(Person person)
+    {
+        Random random = new Random();
+        String randChoice = getChoices().get(random.nextInt(getChoices().size()));
+        ArrayList<String>Choice = new ArrayList<>();
+        Choice.add(randChoice);
+        vote(person,Choice);
     }
 }
