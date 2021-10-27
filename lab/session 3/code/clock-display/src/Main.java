@@ -4,7 +4,7 @@ public class Main {
         ClockDisplay clock = new ClockDisplay();
         clock.setTime(10 ,9 ,20 );
         clock.print();
-        for(int i=0;i<3;i++)
+        for(int i = 0; i < 3; i++)
         {
             clock.timeTick();
             clock.print();

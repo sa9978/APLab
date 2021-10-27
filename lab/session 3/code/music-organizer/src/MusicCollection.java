@@ -112,14 +112,14 @@ public class MusicCollection
         boolean flag = false;
         for(int i = 0; i < files.size(); i++)
         {
-            if(files.get(i).getName().equals(musicName))
+            if(files.get(i).getName()==(musicName))
             {
                 flag = true;
                 System.out.println("index = " + i);
                 break;
             }
         }
-        if(flag == false)
+        if(!flag)
             System.out.println(musicName + " Not found");
     }
 }
