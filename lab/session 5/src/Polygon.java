@@ -12,10 +12,14 @@ public abstract class Polygon extends Shape {
     /**
      * a constructor for make sides ArrayList
      */
-    public Polygon(int... args) {
+    public Polygon(int... sides) {
         super();
-        for (int arg : args)
-            sides.add(arg);
+        for (int side : sides)
+            this.sides.add(side);
+    }
+
+    public ArrayList<Integer> getSides() {
+        return sides;
     }
 
     @Override
