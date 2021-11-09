@@ -1,7 +1,7 @@
 /**
  * @author sara
  * @version 1.0.0
- * Rectangle is a SubClass for Polygon class that contains Polygons!
+ * Rectangle is a SubClass for Polygon
  */
 public class Rectangle extends Polygon {
 

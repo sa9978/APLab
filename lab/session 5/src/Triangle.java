@@ -1,7 +1,7 @@
 /**
  * @author sara
  * @version 1.0.0
- * triangle is a SubClass for Polygon class that contains Polygons!
+ * triangle is a SubClass for Polygon class
  */
 
 public class Triangle extends Polygon {
