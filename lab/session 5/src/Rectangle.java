@@ -43,6 +43,12 @@ public class Rectangle extends Polygon {
 
     @Override
     public String toString() {
-        return "this is a rectangle\nits different sides are : \n" + getSides().get(0) + " & " + getSides().get(1);
+        String st = "this is a rectangle\n";
+        if (isSquare()) {
+            st = st + "its sides are " + getSides().get(0);
+        } else {
+            st = st + "its different sides are : \n" + getSides().get(0) + " & " + getSides().get(1);
+        }
+        return st;
     }
 }

@@ -41,6 +41,7 @@ public class Triangle extends Polygon {
 
     @Override
     public String toString() {
-        return "this is a triangle\nits sides are : \n" + getSides().get(0) + " & " + getSides().get(1) + " & " + getSides().get(3);
+        return "this is a triangle\nits sides are : \n" + getSides().get(0) + " & " +
+                getSides().get(1) + " & " + getSides().get(2);
     }
 }
