@@ -38,24 +38,20 @@ public class Voting {
     }
 
     /**
-     * @param person  the person's information who wants to vote
-     * @param choices the person's choices (single / multiple choices)
+     * @param person the person's information who wants to vote
      */
     public void vote(Person person, ArrayList<String> choices) {
         JalaliCalendar jalaliCalendar = new JalaliCalendar();
 
         if (!voters.contains(person)) //if person didn't vote before :
         {
-            if ((type == 0 && choices.size() == 1) || (type == 1 && choices.size() > 1)) //if person wants to submit single vote
+            voters.add(person); //add person to the voters array list
+            Vote newVote = new Vote(person, jalaliCalendar.toString()); //add new vote with person info and date as a string
+            for (String choice : choices) //search choices to find choice and add new vote
             {
-                voters.add(person); //add person to the voters array list
-                Vote newVote = new Vote(person, jalaliCalendar.toString()); //add new vote with person info and date as a string
-                for (String choice : choices) //search choices to find choice and add new vote
-                {
-                    polls.get(choice).add(newVote);
-                }
-                System.out.println("Your Vote Submitted");
+                polls.get(choice).add(newVote);
             }
+            System.out.println("Your Vote Submitted");
         }
     }
 
@@ -70,7 +66,8 @@ public class Voting {
      * prints all votes / find the Winner and print it
      */
     public void printResult() {
-        String winner = "";
+        String winner;
+        winner = "";
         int max = 0;
         for (String choice : polls.keySet()) { //polls.keySet makes a new set with first part of hashmap
             if (polls.get(choice).size() > max) { //if votes counts for given choice is greater than max , then set winner
@@ -82,7 +79,6 @@ public class Voting {
     }
 
     /**
-     *
      * @return polls
      */
     public HashMap<String, HashSet<Vote>> getPolls() {
@@ -98,14 +94,14 @@ public class Voting {
 
     /**
      * random vote
+     *
      * @param person person
      */
-    public void RandomChoice(Person person)
-    {
+    public void RandomChoice(Person person) {
         Random random = new Random();
         String randChoice = getChoices().get(random.nextInt(getChoices().size()));
-        ArrayList<String>Choice = new ArrayList<>();
+        ArrayList<String> Choice = new ArrayList<>();
         Choice.add(randChoice);
-        vote(person,Choice);
+        vote(person, Choice);
     }
 }
