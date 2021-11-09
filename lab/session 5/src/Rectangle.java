@@ -36,15 +36,9 @@ public class Rectangle extends Polygon {
 
     @Override
     public void draw() {
-        if (isSquare())
-            System.out.println("Square | " +
-                    "Area : " + calculateArea() + " | " +
-                    "Perimeter :" + calculatePerimeter() + " | ");
-        else {
-            System.out.println("Rectangle | " +
-                    "Area : " + calculateArea() + " | " +
-                    "Perimeter :" + calculatePerimeter() + " | ");
-        }
+        System.out.println("Rectangle | " +
+                "Area : " + calculateArea() + " | " +
+                "Perimeter :" + calculatePerimeter() + " | ");
     }
 
     @Override

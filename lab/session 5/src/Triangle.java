@@ -33,15 +33,9 @@ public class Triangle extends Polygon {
     @Override
 
     public void draw() {
-        if (isEquilateral())
-            System.out.println("Equilateral | " +
-                    "Area : " + calculateArea() + " | " +
-                    "Perimeter :" + calculatePerimeter() + " | ");
-        else {
-            System.out.println("not a Equilateral | " +
-                    "Area : " + calculateArea() + " | " +
-                    "Perimeter :" + calculatePerimeter() + " | ");
-        }
+        System.out.println("Triangle | " +
+                "Area : " + calculateArea() + " | " +
+                "Perimeter :" + calculatePerimeter() + " | ");
 
     }
 
