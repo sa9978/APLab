@@ -4,7 +4,7 @@ import java.util.Objects;
 /**
  * @author sara
  * @version 1.0.0
- * Polygan is a SubClass for Shape class that contains Polygons!
+ * Polygon is a SubClass for Shape class that contains Polygons!
  */
 public abstract class Polygon extends Shape {
     ArrayList<Integer> sides = new ArrayList<>();

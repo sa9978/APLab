@@ -1,3 +1,8 @@
+/**
+ * @author sara
+ * @version 1.0.0
+ * Rectangle is a SubClass for Polygon class that contains Polygons!
+ */
 public class Rectangle extends Polygon {
 
 
@@ -44,7 +49,6 @@ public class Rectangle extends Polygon {
 
     @Override
     public String toString() {
-        String st = "this is a rectangle\nits different sides are : \n" + sides.get(0) + " & " + sides.get(1);
-        return st;
+        return "this is a rectangle\nits different sides are : \n" + getSides().get(0) + " & " + getSides().get(1);
     }
 }
