@@ -17,8 +17,7 @@ public class Triangle extends Polygon {
     @Override
     public double calculateArea() {
         double s = (getSides().get(0) + getSides().get(1) + getSides().get(2)) / (double) 2;
-        double area = Math.sqrt(s * (s - getSides().get(0)) * (s - getSides().get(1)) * (s - getSides().get(2)));
-        return area;
+        return Math.sqrt(s * (s - getSides().get(0)) * (s - getSides().get(1)) * (s - getSides().get(2)));
     }
 
     /**
