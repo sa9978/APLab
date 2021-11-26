@@ -7,5 +7,5 @@ public class Show {
 
     public void reserveSeat(){}
 
-    public void reserveHeat(){}
+    public void reserveHeall(){}
 }
